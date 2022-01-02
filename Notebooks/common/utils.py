@@ -34,7 +34,7 @@ def extract_data(data_dir):
 
     # load the data from Excel file
     data = pd.read_excel(
-        os.path.join(data_dir, "GEFCom2014-E", "GEFCom2014-E.xlsx"), parse_dates=["Date"]
+        os.path.join(data_dir, "GEFCom2014-E", "GEFCom2014-E.xlsx"), parse_dates=["Date"], engine='openpyxl'
     )
 
     # create timestamp variable from Date and Hour
